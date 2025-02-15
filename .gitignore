@@ -1,0 +1,24 @@
+# Ignore target directory (compiled binaries and build artifacts)
+target/
+
+# Ignore Maven-specific files
+*.log
+*.cache
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore IDE-specific files (for IntelliJ, Eclipse, VSCode, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+*.vscode/
+.project
+.classpath
+.settings/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
