@@ -72,6 +72,7 @@ Run it using:
 ./target/network-connections
 ```
 
+Sample Output:
 ```
 ❯ ./network-connections
 Enter Process ID (PID): 913
