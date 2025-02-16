@@ -59,7 +59,7 @@ sudo apt install lsof  # Ubuntu/Linux
 ## 🛠️ Compiling the Code
 To **compile and generate a native binary**, run:
 ```sh
-mvn clean package -Pnative
+mvn clean package -Dpackage=native-image -Pnative
 ```
 
 After a successful build, the **native executable binary** will be available inside:
