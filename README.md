@@ -72,6 +72,16 @@ Run it using:
 ./target/network-connections
 ```
 
+```
+❯ ./network-connections
+Enter Process ID (PID): 913
+Raw command output:
+Protocol   Local Address:Port        Foreign Address:Port      State           Direction
+--------------------------------------------------------------------------------
+TCP        192.168.68.104:50359      169.148.149.132:443       ESTABLISHED     Outgoing
+UDP        192.168.68.104:60430      142.250.194.138:443       -               -
+```
+
 ---
 
 ## 🏆 Why GraalVM?
