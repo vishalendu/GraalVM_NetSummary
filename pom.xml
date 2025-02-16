@@ -26,6 +26,16 @@
     <build>
         <plugins>
             <!-- GraalVM Native Image Plugin -->
+           <plugin>
+               <groupId>org.graalvm.buildtools</groupId>
+               <artifactId>native-maven-plugin</artifactId>
+               <configuration>
+                   <imageName>${artifactId}</imageName>
+                   <buildArgs combine.children="append">
+                       <buildArg>--gc=G1</buildArg>
+                   </buildArgs>
+               </configuration>
+           </plugin>
             <plugin>
                 <groupId>org.graalvm.nativeimage</groupId>
                 <artifactId>native-image-maven-plugin</artifactId>
@@ -48,18 +58,18 @@
                     </buildArgs>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.example.NetworkConnections</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <version>3.2.2</version>-->
+<!--                <configuration>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.example.NetworkConnections</mainClass>-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
